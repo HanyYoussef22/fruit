@@ -8,8 +8,7 @@ class OnbordingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      body: OnboardingPageView()
+      body: OnboardingPageView(),
     );
   }
 }
