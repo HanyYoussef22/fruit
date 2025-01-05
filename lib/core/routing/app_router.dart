@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruit/core/routing/routes.dart';
 
-import '../../features/onBording/ui/onBording.dart';
+import '../../features/onBording/ui/onBoarding.dart';
 
 class AppRouter {
   Route? generateRouter(RouteSettings settings) {
