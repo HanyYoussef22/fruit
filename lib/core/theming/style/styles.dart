@@ -116,7 +116,7 @@ abstract class Styles {
   );
 
   //----------------- fonts 15 -----------------------
-  static TextStyle font15Medium = TextStyle(
+  static TextStyle font15Medium = TextStyle( 
     fontFamily: 'Cairo',
     fontSize: 15.sp,
     fontWeight: FontWeight.w500,
