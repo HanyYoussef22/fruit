@@ -9,33 +9,48 @@ class PageViewItem extends StatelessWidget {
   final String image;
   final Widget subtitle;
   final Widget title;
+  final PageController pageController;
 
   const PageViewItem(
       {super.key,
       required this.bgImage,
       required this.image,
       required this.subtitle,
-      required this.title,  required this.isVisible});
+      required this.title,  required this.isVisible, required this.pageController});
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Visibility(
-          visible: isVisible,
-          child: Positioned(
-            height: 20.h,
-            width: 30.w,
-            top: 20.h,
-            right: 20.w,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Text("تخط",style: Styles.font13Grayscale500W600,textAlign: TextAlign.end,),
-              ],
-            ),
-          ),
+        Stack(
+          children: [
+            if (isVisible)
+              Positioned(
+                height: 20.h,
+                width: 30.w,
+                top: 20.h,
+                right: 20.w,
+                child: GestureDetector(
+                  onTap: () {
+                    pageController.animateToPage(1,
+                        duration: const Duration(milliseconds: 500),
+                        curve: Curves.easeInOut);
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text(
+                        "تخط",
+                        style: Styles.font13Grayscale500W600,
+                        textAlign: TextAlign.end,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+          ],
         ),
+
         SizedBox(
             width: double.infinity,
             height: MediaQuery.of(context).size.height*0.488,

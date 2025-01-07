@@ -18,7 +18,7 @@ class ViewPage extends StatelessWidget {
           bgImage: Assets.bgImageOnboarding1,
           image: Assets.imageOnboarding1,
           title: textTitel(),
-          subtitle: textSubTitel(), isVisible: true,),
+          subtitle: textSubTitel(), isVisible: true, pageController:  pageController,),
         PageViewItem(
           bgImage: Assets.bgImageOnboarding2,
           image: Assets.imageOnboarding2,
@@ -26,7 +26,7 @@ class ViewPage extends StatelessWidget {
             'ابحث وتسوق',
             style: Styles.font23BlackW700,
           ),
-          subtitle: textSubTitel2(), isVisible: false,
+          subtitle: textSubTitel2(), isVisible: false, pageController: pageController,
         ),
       ],
     );
