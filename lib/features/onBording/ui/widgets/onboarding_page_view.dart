@@ -1,10 +1,14 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fruit/core/helpers/extenation.dart';
+import 'package:fruit/core/helpers/shared_perfrance_helper.dart';
+import 'package:fruit/core/routing/routes.dart';
 import 'package:fruit/core/theming/style/colors.dart';
 import 'package:fruit/core/widgets/custom_button.dart';
 import 'package:fruit/features/onBording/ui/widgets/page_view.dart';
 
+import '../../../../core/helpers/constants.dart';
 import '../../../../core/theming/style/styles.dart';
 
 class OnboardingPageView extends StatefulWidget {
@@ -58,7 +62,10 @@ class _OnboardingPageViewState extends State<OnboardingPageView> {
           maintainSize: true,
           child: Padding(
             padding: EdgeInsetsDirectional.symmetric(horizontal: 16.w),
-            child: customButton(text: "ابدأ الان", onTap:(){} ),
+            child: customButton(text: "ابدأ الان", onTap:(){
+              SharedPrefHelper.setData(SharedPrefKeys.isOnboardingShown, true);
+                  context.pushReplacementNamed(Routers.loginScreen);
+            } ),
 
           ),
         ),

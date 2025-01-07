@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:fruit/core/routing/routes.dart';
+import 'package:fruit/features/login/ui/login_screen.dart';
 
 import '../../features/onBording/ui/onBoarding.dart';
 
@@ -12,9 +13,9 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const OnbordingScreen(),
         );
-      case Routers.splashScreen:
+      case Routers.loginScreen:
         return MaterialPageRoute(
-          builder: (_) => const OnbordingScreen(),
+          builder: (_) => const LoginScreen(),
         );
 
 
