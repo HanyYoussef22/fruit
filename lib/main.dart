@@ -14,6 +14,6 @@ void main() async {
   ));
 }
 Future<bool> isUserSeen() async {
-  // isUserShown = await SharedPrefHelper.getBool(SharedPrefKeys.isOnboardingShown);
+  isUserShown = await SharedPrefHelper.getBool(SharedPrefKeys.isOnboardingShown);
   return isUserShown;
 }

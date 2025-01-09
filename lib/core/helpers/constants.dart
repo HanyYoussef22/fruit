@@ -12,6 +12,9 @@ class Assets {
   static const String bgImageOnboarding2 = "assets/images/svgs/onboarding/bgImage2.svg";
   static const String imageOnboarding1 = "assets/images/svgs/onboarding/fruit1.svg";
   static const String imageOnboarding2 = "assets/images/svgs/onboarding/fruit2.svg";
+  static const String appleicon = "assets/images/svgs/appleicon.svg";
+  static const String googleicon = "assets/images/svgs/googleicon.svg";
+  static const String facebookicon = "assets/images/svgs/facebookicon.svg";
 
 
 }
