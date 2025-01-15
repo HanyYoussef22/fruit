@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruit/core/theming/style/colors.dart';
+import 'package:fruit/core/widgets/custom_button.dart';
 import 'package:fruit/core/widgets/text_form_field.dart';
-import 'package:fruit/features/login/ui/widgets/forget_password.dart';
 
-import '../../../../core/widgets/custom_button.dart';
+import 'forget_password.dart';
 
 class EmailAndPassword extends StatefulWidget {
   const EmailAndPassword({super.key});

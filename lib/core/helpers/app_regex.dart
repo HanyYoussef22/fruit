@@ -9,6 +9,10 @@ class AppRegex {
         r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$")
         .hasMatch(password);
   }
+  static bool isNameValid(String name) {
+    final namePattern = r"^[a-zA-Z]+(?: [a-zA-Z]+)*$";
+    return RegExp(namePattern).hasMatch(name) && name.length >= 2 && name.length <= 50;
+  }
 
   static bool isPhoneNumberValid(String phoneNumber) {
     return RegExp(r'^(010|011|012|015)[0-9]{8}$').hasMatch(phoneNumber);

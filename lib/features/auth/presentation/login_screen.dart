@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:fruit/core/helpers/extenation.dart';
-import 'package:fruit/core/theming/style/styles.dart';
-import 'package:fruit/features/login/ui/widgets/dont_have_account.dart';
-import 'package:fruit/features/login/ui/widgets/or_divider.dart';
-import 'package:fruit/features/login/ui/widgets/social_login_button.dart';
 
-import '../../../core/helpers/constants.dart';
-import 'widgets/email_and_password.dart';
+import 'package:fruit/core/theming/style/styles.dart';
+import 'package:fruit/features/auth/presentation/login_widgets/email_and_password.dart';
+import 'package:fruit/features/auth/presentation/login_widgets/social_login_button.dart';
+
+import '../../../../core/helpers/constants.dart';
+import 'login_widgets/dont_have_account.dart';
+import 'login_widgets/or_divider.dart';
+
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -21,7 +22,7 @@ class LoginScreen extends StatelessWidget {
 
           icon: Icon(Icons.arrow_back_ios_new_outlined),
           onPressed: () {
-            context.pop();
+            Navigator.pop(context);
           },
         ),
         centerTitle: true,

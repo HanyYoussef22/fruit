@@ -40,6 +40,18 @@ abstract class Styles {
     fontWeight: FontWeight.w600,
     color: ColorsManger.green600Color,
   );
+  static TextStyle font13greenBlack600 = TextStyle(
+    fontFamily: 'Cairo',
+    fontSize: 13.sp,
+    fontWeight: FontWeight.w600,
+    color: ColorsManger.primaryColor,
+  );
+  static TextStyle font13GrayscaleW700 = TextStyle(
+    fontFamily: 'Cairo',
+    fontSize: 13.sp,
+    fontWeight: FontWeight.w700,
+    color: ColorsManger.grayscale400,
+  );
 
 
   //----------------- fonts 16 -----------------------
@@ -72,6 +84,12 @@ abstract class Styles {
     fontSize: 16.sp,
     fontWeight: FontWeight.w600,
     color: ColorsManger.greyColor,
+  );
+  static TextStyle font16GrayscaleW600 = TextStyle(
+    fontFamily: 'Cairo',
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w600,
+    color: ColorsManger.grayscale400,
   );
 
   //----------------- fonts 19 -----------------------
