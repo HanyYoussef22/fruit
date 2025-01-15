@@ -5,6 +5,7 @@ class SharedPrefKeys {
 
 }
 class Assets {
+
   static const String topSplash = "assets/images/svgs/topSplash.svg";
   static const String logoSplash = "assets/images/svgs/logoSplash.svg";
   static const String buttonSplash = "assets/images/svgs/buttonSplash.svg";
@@ -15,6 +16,7 @@ class Assets {
   static const String appleicon = "assets/images/svgs/appleicon.svg";
   static const String googleicon = "assets/images/svgs/googleicon.svg";
   static const String facebookicon = "assets/images/svgs/facebookicon.svg";
+  static const String imagesCheck = "assets/images/svgs/imagesCheck.svg";
 
 
 }
