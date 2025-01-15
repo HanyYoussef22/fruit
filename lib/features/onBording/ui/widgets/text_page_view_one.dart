@@ -6,6 +6,7 @@ Widget textTitel() {
     text: TextSpan(children: [
       TextSpan(
         text: 'Fruit',
+
         style: Styles.font23BlackW700,
       ),
       TextSpan(

@@ -25,7 +25,7 @@ Widget customButton({
             color: Colors.white,
             fontWeight: FontWeight.w900,
             fontSize: 16.sp,
-            fontFamily: 'Poppins'),
+          fontFamily: 'Cairo',),
       ),
     ),
   );
