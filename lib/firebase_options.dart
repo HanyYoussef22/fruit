@@ -44,38 +44,39 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyB6Vl4Z1L2U4FMeNUfu1KFrPDbeSAfi0lA',
-    appId: '1:773582405408:web:9150d648b795947ea36145',
-    messagingSenderId: '773582405408',
-    projectId: 'e-commerce-e902b',
-    authDomain: 'e-commerce-e902b.firebaseapp.com',
-    storageBucket: 'e-commerce-e902b.firebasestorage.app',
-    measurementId: 'G-K433MQJ9ET',
+    apiKey: 'AIzaSyDqHsa2KA-gPm0sQXoKXfq48_YYARQmxmY',
+    appId: '1:1000988449558:web:ddaa95e074b21b1a5c0e37',
+    messagingSenderId: '1000988449558',
+    projectId: 'e-commerce-104ac',
+    authDomain: 'e-commerce-104ac.firebaseapp.com',
+    storageBucket: 'e-commerce-104ac.firebasestorage.app',
+    measurementId: 'G-RMGYM6DHLV',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyC4Guju7RjhFuCw-b6ioLikW453fuiWmUE',
-    appId: '1:773582405408:android:5439ec9b6868e783a36145',
-    messagingSenderId: '773582405408',
-    projectId: 'e-commerce-e902b',
-    storageBucket: 'e-commerce-e902b.firebasestorage.app',
+    apiKey: 'AIzaSyBgGDqFqhJbnofXF2KINL-sy4AquyNjPoc',
+    appId: '1:1000988449558:android:02fca1566405afd35c0e37',
+    messagingSenderId: '1000988449558',
+    projectId: 'e-commerce-104ac',
+    storageBucket: 'e-commerce-104ac.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDUAkVgr-NTnJ5i2EI9U-5PlFWI6ydx6nc',
-    appId: '1:773582405408:ios:f8e3958556cebf11a36145',
-    messagingSenderId: '773582405408',
-    projectId: 'e-commerce-e902b',
-    storageBucket: 'e-commerce-e902b.firebasestorage.app',
+    apiKey: 'AIzaSyB7G7RPTpXEy-vFwzze-3y_bh1jSeLC2bo',
+    appId: '1:1000988449558:ios:030d0554a467c2d75c0e37',
+    messagingSenderId: '1000988449558',
+    projectId: 'e-commerce-104ac',
+    storageBucket: 'e-commerce-104ac.firebasestorage.app',
     iosBundleId: 'com.example.fruit',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDUAkVgr-NTnJ5i2EI9U-5PlFWI6ydx6nc',
-    appId: '1:773582405408:ios:f8e3958556cebf11a36145',
-    messagingSenderId: '773582405408',
-    projectId: 'e-commerce-e902b',
-    storageBucket: 'e-commerce-e902b.firebasestorage.app',
+    apiKey: 'AIzaSyB7G7RPTpXEy-vFwzze-3y_bh1jSeLC2bo',
+    appId: '1:1000988449558:ios:030d0554a467c2d75c0e37',
+    messagingSenderId: '1000988449558',
+    projectId: 'e-commerce-104ac',
+    storageBucket: 'e-commerce-104ac.firebasestorage.app',
     iosBundleId: 'com.example.fruit',
   );
+
 }

@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "773582405408",
-    "project_id": "e-commerce-e902b",
-    "storage_bucket": "e-commerce-e902b.firebasestorage.app"
+    "project_number": "1000988449558",
+    "project_id": "e-commerce-104ac",
+    "storage_bucket": "e-commerce-104ac.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:773582405408:android:5439ec9b6868e783a36145",
+        "mobilesdk_app_id": "1:1000988449558:android:02fca1566405afd35c0e37",
         "android_client_info": {
           "package_name": "com.example.fruit"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyC4Guju7RjhFuCw-b6ioLikW453fuiWmUE"
+          "current_key": "AIzaSyBgGDqFqhJbnofXF2KINL-sy4AquyNjPoc"
         }
       ],
       "services": {

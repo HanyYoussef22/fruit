@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:fruit/features/auth/presentation/cubit/sinup_cubit.dart';
+import 'package:fruit/features/auth/presentation/cubit/sinup_cubit/sinup_cubit.dart';
 import 'package:fruit/features/auth/presentation/sinup_widgets/email_and_password.dart';
 import 'package:fruit/features/auth/presentation/sinup_widgets/have_account.dart';
 

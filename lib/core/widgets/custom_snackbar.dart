@@ -19,7 +19,7 @@ class CustomSnackBar {
           ],
         ),
         backgroundColor: backgroundColor,
-        duration: const Duration(seconds: 3),
+        duration: const Duration(seconds:5),
         behavior: SnackBarBehavior.floating, // Floating SnackBar
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),

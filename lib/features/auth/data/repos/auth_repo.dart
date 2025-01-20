@@ -43,4 +43,36 @@ class AuthRepoImpl implements AuthRepo {
 
 
   }
+
+  @override
+  Future<FirResult<UserEntity>> googleLogin() async{
+    try{
+      final response= await _firebaseAuthService.signInWithGoogle();
+      return FirResult.success(UserModel.fromFirebaseUser(response));
+
+    }on  CustomException catch (e){
+      return FirResult.failure(e.message);
+
+    }
+    catch(e){
+      log("Exception in googleLogin fun in auth repo : ${e.toString()}");
+
+      return FirResult.failure("An error occurred. Please try again later.");
+    }
+  }
+
+  @override
+  Future<FirResult<UserEntity>> facebookLogin() async{
+    try{
+       final response= await _firebaseAuthService.signInWithFacebook();
+       return FirResult.success(UserModel.fromFirebaseUser(response));
+    }on CustomException catch (e){
+      return FirResult.failure(e.message);
+  }
+    catch(e){
+      log("Exception in facebookLogin fun in auth repo : ${e.toString()}");
+
+      return FirResult.failure("An error occurred. Please try again later.");
+    }
+  }
 }

@@ -5,7 +5,7 @@ import 'package:fruit/core/theming/style/colors.dart';
 import 'package:fruit/core/widgets/text_form_field.dart';
 
 import '../../../../core/helpers/app_regex.dart';
-import '../cubit/sinup_cubit.dart';
+import '../cubit/sinup_cubit/sinup_cubit.dart';
 
 
 class EmailAndPasswordSinup extends StatefulWidget {
