@@ -4,12 +4,12 @@ import 'package:fruit/core/helpers/extenation.dart';
 import 'package:fruit/core/routing/routes.dart';
 
 import 'package:fruit/core/theming/style/styles.dart';
-import 'package:fruit/features/auth/presentation/cubit/sinup_cubit.dart';
+import 'package:fruit/features/auth/presentation/cubit/sinup_cubit/sinup_cubit.dart';
 
 import 'package:fruit/features/auth/presentation/sinup_widgets/sinup_body.dart';
 
 import '../../../core/widgets/custom_snackbar.dart';
-import 'cubit/sinup_state.dart';
+import 'cubit/sinup_cubit/sinup_state.dart';
 
 class SinupScreen extends StatelessWidget {
   const SinupScreen({super.key});
@@ -47,6 +47,7 @@ class SinupScreen extends StatelessWidget {
               context.pop();
               context.pushReplacementNamed(Routers.homeScreen);
             }, error: (error) {
+              context.pop();
               CustomSnackBar.show(context,error,backgroundColor: Colors.grey);
             });
           },

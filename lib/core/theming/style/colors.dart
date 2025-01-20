@@ -19,11 +19,6 @@ class ColorsManger {
 
 
 
-
-
-
-
-
   Color SecendColor = const Color(0xFF1B152E);
   Color mainBackgroundColorDark = const Color(0xFF060E1E);
 }

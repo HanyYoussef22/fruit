@@ -4,8 +4,9 @@ import 'package:fruit/core/di/dependenct_injection.dart';
 import 'package:fruit/core/networking/firebase_service/firebase_auth_service.dart';
 import 'package:fruit/core/routing/routes.dart';
 import 'package:fruit/features/auth/data/repos/auth_repo.dart';
+import 'package:fruit/features/auth/presentation/cubit/login_cubit/login_cubit.dart';
 import 'package:fruit/features/home/home_screen.dart';
-import '../../features/auth/presentation/cubit/sinup_cubit.dart';
+import '../../features/auth/presentation/cubit/sinup_cubit/sinup_cubit.dart';
 import '../../features/auth/presentation/login_screen.dart';
 import '../../features/auth/presentation/sinup_screen.dart';
 import '../../features/onBording/ui/onBoarding.dart';
@@ -19,7 +20,11 @@ class AppRouter {
         );
       case Routers.loginScreen:
         return MaterialPageRoute(
-          builder: (_) => const LoginScreen(),
+          builder: (_) =>
+              BlocProvider(
+                create: (context) => getIt<LoginCubit>(),
+                child: LoginScreen(),
+              ),
         );
       case Routers.signupScreen:
         return MaterialPageRoute(

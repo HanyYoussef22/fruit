@@ -1,8 +1,9 @@
 
+import 'package:fruit/features/auth/presentation/cubit/login_cubit/login_cubit.dart';
 import 'package:get_it/get_it.dart';
 
 import '../../features/auth/data/repos/auth_repo.dart';
-import '../../features/auth/presentation/cubit/sinup_cubit.dart';
+import '../../features/auth/presentation/cubit/sinup_cubit/sinup_cubit.dart';
 import '../networking/firebase_service/firebase_auth_service.dart';
 
 final getIt = GetIt.instance;
@@ -10,11 +11,12 @@ final getIt = GetIt.instance;
 void setupGitIt() {
   getIt.registerLazySingleton<FirebaseAuthService>(()=> FirebaseAuthService());
 
-  // Login DI
+  // Sin Up DI
   getIt.registerLazySingleton<AuthRepoImpl>(() => AuthRepoImpl(getIt()));
   getIt.registerFactory<SinUpCubit>(()=> SinUpCubit(getIt())) ;
 //
-// //SinUp
+// //Login
+     getIt.registerFactory<LoginCubit>(()=> LoginCubit(getIt())) ;
 //   getIt.registerLazySingleton<SinUpRepo>(() => SinUpRepo(getIt()));
 //   getIt.registerFactory<SinupCubit>(()=> SinupCubit(getIt())) ;
 //

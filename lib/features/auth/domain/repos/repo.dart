@@ -5,5 +5,9 @@ abstract class AuthRepo {
   // Future<FirResult<UserEntity>> login(String email, String password);
   Future<FirResult<UserEntity>> register({required String name,required String email,required String password});
   Future<FirResult<UserEntity>> login({required String email,required String password});
+  Future<FirResult<UserEntity>> googleLogin();
+  Future<FirResult<UserEntity>> facebookLogin();
+
+
 
 }

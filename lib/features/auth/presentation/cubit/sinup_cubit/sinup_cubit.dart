@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruit/features/auth/presentation/cubit/sinup_state.dart';
+import 'package:fruit/features/auth/presentation/cubit/sinup_cubit/sinup_state.dart';
 
-import '../../data/repos/auth_repo.dart';
+import '../../../data/repos/auth_repo.dart';
 
 class SinUpCubit extends Cubit<SinUpState> {
   final AuthRepoImpl _authRepo;
