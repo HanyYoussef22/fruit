@@ -1,7 +1,9 @@
 bool isUserShown = false;
+bool isUserLogin = false;
 class SharedPrefKeys {
   static const String userToken = 'userToken';
   static const String isOnboardingShown = 'isOnboardingShown';
+  static const String isUserLogin = 'isUserLogin';
 
 }
 class Assets {
@@ -17,7 +19,20 @@ class Assets {
   static const String googleicon = "assets/images/svgs/googleicon.svg";
   static const String facebookicon = "assets/images/svgs/facebookicon.svg";
   static const String imagesCheck = "assets/images/svgs/imagesCheck.svg";
+  static const String profileImage = "assets/images/profile_image.png";
+  static const String notification = "assets/images/svgs/home/notification.svg";
+  static const String notfiRed = "assets/images/svgs/home/notfRed.svg";
+  static const String filtterIcon = "assets/images/svgs/home/filter.svg";
+  static const String searchIcon = "assets/images/svgs/home/search_icon.svg";
+  static const String slide = "assets/images/svgs/home/slide.svg";
 
+
+}
+class BackendEndpoint
+{
+ static const String  addUserData ='users';
+ static const String  getUserData ='users';
+  static const String  checkIfDataExist ='users';
 
 }
 

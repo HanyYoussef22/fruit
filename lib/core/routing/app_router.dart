@@ -5,7 +5,7 @@ import 'package:fruit/core/networking/firebase_service/firebase_auth_service.dar
 import 'package:fruit/core/routing/routes.dart';
 import 'package:fruit/features/auth/data/repos/auth_repo.dart';
 import 'package:fruit/features/auth/presentation/cubit/login_cubit/login_cubit.dart';
-import 'package:fruit/features/home/home_screen.dart';
+import 'package:fruit/features/home/ui/home_screen.dart';
 import '../../features/auth/presentation/cubit/sinup_cubit/sinup_cubit.dart';
 import '../../features/auth/presentation/login_screen.dart';
 import '../../features/auth/presentation/sinup_screen.dart';
