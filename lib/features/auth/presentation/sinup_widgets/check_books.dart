@@ -1,6 +1,5 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:fruit/core/theming/style/colors.dart';
 import '../../../../../core/theming/style/styles.dart';
 import '../../../../../core/widgets/custom_check_box.dart';
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'ui/widgets/home_screen_body.dart';
+import 'widgets/home_screen_body.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -9,7 +9,11 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: HomeScreenBody(),
+        child: GestureDetector(
+            onTap: () {
+              FocusScope.of(context).unfocus();
+            },
+            child: HomeScreenBody()),
       ),
     );
   }

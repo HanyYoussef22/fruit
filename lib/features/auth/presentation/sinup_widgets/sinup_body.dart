@@ -54,10 +54,13 @@ class _SinupBodyState extends State<SinupBody> {
   {
     if(context.read<SinUpCubit>().formKey.currentState!.validate()){
       context.read<SinUpCubit>().formKey.currentState?.save();
-      if(!isClickBox){
-        CustomSnackBar.show(context, 'يجب الموافقة على الشروط والأحكام',backgroundColor: Colors.grey);
+      if(isClickBox){
+
         context.read<SinUpCubit>().emitSinupState();
 
+      }
+      else{
+        CustomSnackBar.show(context, 'يجب الموافقة على الشروط والأحكام');
       }
     }
 

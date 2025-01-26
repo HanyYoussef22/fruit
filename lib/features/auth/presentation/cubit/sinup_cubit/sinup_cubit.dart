@@ -17,7 +17,7 @@ class SinUpCubit extends Cubit<SinUpState> {
 
 
   void emitSinupState() async{
-
+    emit(SinUpState.loading());
    final response= await _authRepo.register(name: nameController.text, email: emailController.text, password: passController.text);
    response.when(success: (userEntity) async {
      emit(SinUpState.success(userEntity));

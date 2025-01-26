@@ -14,6 +14,7 @@ void main() async {
   setupGitIt();
   await ScreenUtil.ensureScreenSize();
   await isUserSeen();
+  await isUserLoggedIn();
   WidgetsFlutterBinding.ensureInitialized();
   Bloc.observer = CustomBlocObserver();
   await Firebase.initializeApp(
@@ -29,3 +30,8 @@ Future<bool> isUserSeen() async {
       await SharedPrefHelper.getBool(SharedPrefKeys.isOnboardingShown);
   return isUserShown;
 }
+Future<bool> isUserLoggedIn() async {
+  isUserLogin = await SharedPrefHelper.getBool(SharedPrefKeys.isUserLogin);
+  return isUserLogin;
+}
+

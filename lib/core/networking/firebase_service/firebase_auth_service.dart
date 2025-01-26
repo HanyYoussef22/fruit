@@ -8,7 +8,8 @@ import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 
 class FirebaseAuthService {
   Future<User> createUser(
-      {required String email, required String password}) async {
+      {required String email, required String password}) async
+  {
     try {
       final credential =
           await FirebaseAuth.instance.createUserWithEmailAndPassword(
@@ -37,6 +38,12 @@ class FirebaseAuthService {
       log("Exception in register fun in firebase auth : ${e.toString()}  ");
       throw CustomException(message: 'An error occurred while registering');
     }
+  }
+//delete user
+  Future<void> deleteUser() async
+  {
+      await FirebaseAuth.instance.currentUser!.delete();
+
   }
 
   //Sining in with email and password

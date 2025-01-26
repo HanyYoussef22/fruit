@@ -7,6 +7,7 @@ import 'package:fruit/core/theming/style/colors.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 
+
 class FruitApp extends StatelessWidget {
   final AppRouter appRouter;
   const FruitApp({super.key, required this.appRouter});
@@ -36,7 +37,7 @@ class FruitApp extends StatelessWidget {
         ],
 
         locale:  Locale('ar'),
-        initialRoute: isUserShown ? Routers.loginScreen : Routers.onBordingScreen,
+        initialRoute: isUserShown ? (isUserLogin? Routers.homeScreen :Routers.loginScreen) : Routers.onBordingScreen,
           onGenerateRoute:  appRouter.generateRouter,
 
       ),
