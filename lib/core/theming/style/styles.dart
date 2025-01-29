@@ -52,13 +52,24 @@ abstract class Styles {
     fontWeight: FontWeight.w700,
     color: ColorsManger.grayscale400,
   );
-
+  static TextStyle font13OrangeW700 = TextStyle(
+    fontFamily: 'Cairo',
+    fontSize: 13.sp,
+    fontWeight: FontWeight.w700,
+    color: ColorsManger.orangeColor,
+  );
+  static TextStyle font13OrangeW300 = TextStyle(
+    fontFamily: 'Cairo',
+    fontSize: 13.sp,
+    fontWeight: FontWeight.w700,
+    color: ColorsManger.lightOrangeColor,
+  );
 
   //----------------- fonts 16 -----------------------
   static TextStyle font16BlackW700 = TextStyle(
     fontFamily: 'Cairo',
     fontSize: 16.sp,
-    fontWeight: FontWeight.w700,
+    fontWeight: FontWeight.w300,
     color: ColorsManger.blackColor,
   );
   static TextStyle font16SemiBold = TextStyle(

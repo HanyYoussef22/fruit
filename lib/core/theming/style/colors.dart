@@ -10,6 +10,7 @@ class ColorsManger {
   static const Color grayscale500 = Color(0xFF666666);
   static const Color orangeColor = Color(0xFFF4A91F);
   static const Color lightOrangeColor =  Color(0xFFF8C76D);
+
   static const Color grayscale950 = Color(0xFF0C0D0D);
   static const Color blackColor =  Color(0xFF0C0D0D);
   static const Color redColor =  Color(0xFFEB5757);

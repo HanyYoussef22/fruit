@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fruit/core/helpers/extenation.dart';
 import 'package:fruit/core/theming/style/styles.dart';
+
+import '../../../../core/routing/routes.dart';
 
 class PageViewItem extends StatelessWidget {
   final bool isVisible;
@@ -39,10 +42,15 @@ class PageViewItem extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Text(
-                        "تخط",
-                        style: Styles.font13Grayscale500W600,
-                        textAlign: TextAlign.end,
+                      GestureDetector(
+                        onTap: () {
+                          context.pushReplacementNamed(Routers.loginScreen);
+                        },
+                        child: Text(
+                          "تخط",
+                          style: Styles.font13Grayscale500W600,
+                          textAlign: TextAlign.end,
+                        ),
                       ),
                     ],
                   ),
