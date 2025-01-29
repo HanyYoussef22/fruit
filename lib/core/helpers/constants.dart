@@ -25,6 +25,16 @@ class Assets {
   static const String filtterIcon = "assets/images/svgs/home/filter.svg";
   static const String searchIcon = "assets/images/svgs/home/search_icon.svg";
   static const String slide = "assets/images/svgs/home/slide.svg";
+  static const String heart = "assets/images/svgs/home/heart.svg";
+  static const String fruitItem = "assets/images/svgs/home/fruitItem.svg";
+  static const String homeIcon = "assets/images/svgs/home/icons/home.svg";
+  static const String homeIconUnslect = "assets/images/svgs/home/icons/home_unslect.svg";
+  static const String cartIcon = "assets/images/svgs/home/icons/shopping-cart.svg";
+  static const String cartIconUnslect = "assets/images/svgs/home/icons/icon_cart_unslect.svg";
+  static const String prouductIcon = "assets/images/svgs/home/icons/products.svg";
+  static const String prouductIconUnslect = "assets/images/svgs/home/icons/icon_product_unslect.svg";
+  static const String profileIcon = "assets/images/svgs/home/icons/user.svg";
+  static const String profileIconUnslect = "assets/images/svgs/home/icons/icon_profle_unslect.svg";
 
 
 }
