@@ -2,6 +2,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruit/core/helpers/get_user.dart';
 import 'package:fruit/features/auth/data/models/user_model.dart';
 import 'package:fruit/features/auth/domain/entites/user_entity.dart';
 
@@ -16,16 +17,14 @@ class LoginCubit extends Cubit<LoginState> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passController = TextEditingController();
   AutovalidateMode autoValidateMode = AutovalidateMode.disabled;
-
   LoginCubit(this._authRepo) : super(const LoginState.initial());
   void login() async {
     emit(LoginState.loading());
     final response =await _authRepo.login(email: emailController.text, password: passController.text);
     response.when(success: (response){
       emit(LoginState.success(response));
-      userIsLogin(response.uid);
-    }
-        , failure: (error){
+      // userIsLogin();
+    },failure: (error){
       emit(LoginState.error(error: error));
         }
     );
@@ -36,7 +35,6 @@ class LoginCubit extends Cubit<LoginState> {
     final response =await _authRepo.googleLogin();
     response.when(success: (response){
       emit(LoginState.success(response));
-      userIsLogin(response.uid);
     }, failure: (error){
       emit(LoginState.error(error: error));
     });
@@ -46,13 +44,13 @@ class LoginCubit extends Cubit<LoginState> {
     final response =await _authRepo.facebookLogin();
     response.when(success: (response){
       emit(LoginState.success(response));
-      userIsLogin(response.uid);
+      // userIsLogin();
     }, failure: (error){
       emit(LoginState.error(error: error));
     });
   }
-  Future<void> userIsLogin(String user) async {
-    bool isLoggedIn = await _authRepo.isUserLoggedIn(user);
+  Future<void> userIsLogin() async {
+    bool isLoggedIn = await _authRepo.isUserLogin();
 
     await SharedPrefHelper.setData(SharedPrefKeys.isUserLogin, isLoggedIn);
   }

@@ -17,12 +17,9 @@ class FruitApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: const Size(375, 812),
       child: MaterialApp(
-
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           fontFamily: 'Cairo',
-          //
-
           scaffoldBackgroundColor: ColorsManger.whiteColor,
         ),
         localizationsDelegates: const[

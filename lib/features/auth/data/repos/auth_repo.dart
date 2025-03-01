@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:developer';
 
 import 'package:firebase_auth/firebase_auth.dart';
@@ -52,8 +53,7 @@ class AuthRepoImpl implements AuthRepo {
       final response =
           await _firebaseAuthService.signIn(email: email, password: password);
       var user = await getUserData(docId: response.uid);
-      await isUserLoggedIn(response.uid);
-
+      await saveUser(user: user);
       return FirResult.success(user);
     } on CustomException catch (e) {
       return FirResult.failure(e.message);
@@ -71,6 +71,7 @@ class AuthRepoImpl implements AuthRepo {
       user = await _firebaseAuthService.signInWithGoogle();
       var UserData = UserModel.fromFirebaseUser(user);
       final userExist = await _firebasrStoreService.checkIfDataExist(path: BackendEndpoint.checkIfDataExist, docId: user.uid);
+      await saveUser(user: UserData);
       if (userExist) {
         await getUserData(docId: user.uid);
       }else{
@@ -97,6 +98,8 @@ class AuthRepoImpl implements AuthRepo {
 
       var UserData = UserModel.fromFirebaseUser(user);
       final userExist = await _firebasrStoreService.checkIfDataExist(path: BackendEndpoint.checkIfDataExist, docId: user.uid);
+
+      // await saveUser(user: UserData);
       if (userExist) {
         await getUserData(docId: user.uid);
       }else{
@@ -128,8 +131,16 @@ class AuthRepoImpl implements AuthRepo {
     return UserModel.fromJson(userData);
   }
 
-  bool isUserLoggedIn(String userId) {
-    return userId != null && userId.isNotEmpty;
+
+
+  bool isUserLogin() {
+    return _firebaseAuthService.isUserLoggedIn();
+  }
+
+  @override
+  Future saveUser({required UserModel user}) async {
+    var jsonData = jsonEncode(user.toMap());
+    await SharedPrefHelper.setData(SharedPrefKeys.kUser, jsonData);
   }
 
 }

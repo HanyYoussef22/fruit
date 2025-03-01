@@ -8,4 +8,5 @@ abstract class UserEntity {
     required this.name,
     required this.email,
   });
+
 }
