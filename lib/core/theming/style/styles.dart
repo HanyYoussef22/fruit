@@ -69,6 +69,12 @@ abstract class Styles {
   static TextStyle font16BlackW700 = TextStyle(
     fontFamily: 'Cairo',
     fontSize: 16.sp,
+    fontWeight: FontWeight.w700,
+    color: ColorsManger.blackColor,
+  );
+  static TextStyle font16BlackW300 = TextStyle(
+    fontFamily: 'Cairo',
+    fontSize: 16.sp,
     fontWeight: FontWeight.w300,
     color: ColorsManger.blackColor,
   );

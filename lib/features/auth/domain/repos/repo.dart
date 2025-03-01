@@ -10,6 +10,7 @@ abstract class AuthRepo {
   Future<FirResult<UserEntity>> facebookLogin();
   Future addUserData({required UserModel user});
   Future<UserModel> getUserData({required String docId});
+  Future saveUser({required UserModel user});
 
 
 

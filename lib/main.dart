@@ -5,33 +5,39 @@ import 'package:fruit/fruit_app.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'core/di/dependenct_injection.dart';
 import 'core/helpers/custom_boc_observer.dart';
+import 'core/helpers/get_user.dart';
 import 'firebase_options.dart';
 import 'core/helpers/constants.dart';
 import 'core/helpers/shared_perfrance_helper.dart';
 import 'core/routing/app_router.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   setupGitIt();
+  await SharedPrefHelper.init();
   await ScreenUtil.ensureScreenSize();
   await isUserSeen();
   await isUserLoggedIn();
-  WidgetsFlutterBinding.ensureInitialized();
+
   Bloc.observer = CustomBlocObserver();
+
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
   runApp(FruitApp(
+
     appRouter: AppRouter(),
   ));
 }
 
 Future<bool> isUserSeen() async {
-  isUserShown =
-      await SharedPrefHelper.getBool(SharedPrefKeys.isOnboardingShown);
+  isUserShown = await SharedPrefHelper.getBool(SharedPrefKeys.isOnboardingShown);
   return isUserShown;
 }
+
 Future<bool> isUserLoggedIn() async {
   isUserLogin = await SharedPrefHelper.getBool(SharedPrefKeys.isUserLogin);
+
   return isUserLogin;
 }
-

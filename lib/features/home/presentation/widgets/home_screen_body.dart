@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:fruit/features/home/ui/widgets/grid_view_item.dart';
-import 'package:fruit/features/home/ui/widgets/home_appbar.dart';
-
 import '../../../../core/widgets/custom_search.dart';
 import 'best_selling.dart';
+import 'grid_view_item.dart';
+import 'home_appbar.dart';
 import 'offer_slider.dart';
 
 class HomeScreenBody extends StatelessWidget {

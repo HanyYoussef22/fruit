@@ -10,9 +10,18 @@ class AppRegex {
         .hasMatch(password);
   }
   static bool isNameValid(String name) {
-    final namePattern = r"^[a-zA-Z]+(?: [a-zA-Z]+)*$";
+    final namePattern = r"^[a-zA-Z\u0600-\u06FF]+(?: [a-zA-Z\u0600-\u06FF-]+)*$";
     return RegExp(namePattern).hasMatch(name) && name.length >= 2 && name.length <= 50;
   }
+  static bool isNumberValid(String number) {
+    final numberPattern = r"^\d+$";  // يسمح فقط بالأرقام
+    return RegExp(numberPattern).hasMatch(number) && number.length >= 2 && number.length <= 10;
+  }
+  static bool isDescriptionValid(String description) {
+    final descriptionPattern = r"^[a-zA-Z\u0600-\u06FF0-9 .,!?()-]+$";
+    return RegExp(descriptionPattern).hasMatch(description) && description.length >= 5 && description.length <= 200;
+  }
+
 
   static bool isPhoneNumberValid(String phoneNumber) {
     return RegExp(r'^(010|011|012|015)[0-9]{8}$').hasMatch(phoneNumber);
